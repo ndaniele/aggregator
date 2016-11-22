@@ -99,4 +99,6 @@ agtrApp.controller('groupController', ['$scope', 'groupService', function($scope
     
     $scope.groups = groupService.groups;
     
+    $scope.newGroup = '';
+    
 }]);
