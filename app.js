@@ -68,7 +68,9 @@ agtrApp.controller('homeController', ['$scope', function($scope) {
 
 agtrApp.controller('questionsController', ['$scope', function($scope) {
     
-    $scope.test = 'Test'
+    $scope.test = 'Test';
+    
+    $scope.newQuestion = '';
     
     $scope.questions = [
         {
@@ -89,7 +91,7 @@ agtrApp.controller('questionsController', ['$scope', function($scope) {
             user_id: 3,
             group: "Group3"
         },
-    ]
+    ];
     
 }]);
 
