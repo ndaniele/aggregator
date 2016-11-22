@@ -6,13 +6,16 @@ agtrApp.service('groupService', function() {
     
     this.groups = [
         {
-            name: 'testGroup1'
+            name: 'testGroup1',
+            members: 'member1, member2'
         },
         {
-            name: 'testGroup2'
+            name: 'testGroup2',
+            members: 'member3, member4'
         },
         {
-            name: 'testGroup3'
+            name: 'testGroup3',
+            members: 'member5, member6'
         },
     ]
 })
@@ -29,17 +32,29 @@ agtrApp.config(function($stateProvider) {
         controller: 'homeController'
     })
     
-    .state('home.questions', {
-        url: 'questions',
-        templateUrl: 'pages/questions.html',
-        controller: 'questionsController'
-    })
+        .state('home.questions', {
+            url: 'questions',
+            templateUrl: 'pages/questions.html',
+            controller: 'questionsController'
+        })
+
+        .state('home.myGroups', {
+            url: 'mygroups',
+            templateUrl: 'pages/myGroups.html',
+            controller: 'groupController'
+        })
+
+        .state('home.allGroups', {
+            url: 'allgroups',
+            templateUrl: 'pages/allGroups.html',
+            controller: 'groupController'
+        })
     
-    .state('home.myGroups', {
-        url: 'mygroups',
-        templateUrl: 'pages/myGroups.html',
-        controller: 'groupController'
-    })
+        .state('home.newGroup', {
+            url: 'group/new',
+            templateUrl: 'pages/newGroup.html',
+            controller: 'groupController'
+        })  
 })
 
 
