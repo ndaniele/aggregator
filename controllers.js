@@ -6,7 +6,7 @@ agtrApp.controller('homeController', ['$scope', function($scope) {
     
 }]);
 
-agtrApp.controller('questionsController', ['$scope', 'questionsService', function($scope, questionsService) {
+agtrApp.controller('questionsController', ['$scope', '$http', 'questionsService', function($scope, $http, questionsService) {
     
     $scope.questions = questionsService.questions;
     
@@ -21,6 +21,16 @@ agtrApp.controller('questionsController', ['$scope', 'questionsService', functio
     $scope.test = 'Test';
     
     $scope.newQuestion = '';
+    
+    
+    
+    $http.get('http://http://api.openweathermap.org/data/2.5/forecast/daily?q=London&cnt=2&appid=7ce2964527dc9412f3544e113a813c8e', {
+        callback: "JSON_CALLBACK" }, {get: {method: "JSONP" }})
+    .success(function(result) {
+       
+        $scope.httpQuestions = result; 
+        console.log($scope.httpQuestions);
+    });
     
 }]);
 
