@@ -6,7 +6,9 @@ agtrApp.controller('homeController', ['$scope', function($scope) {
     
 }]);
 
-agtrApp.controller('questionsController', ['$scope', function($scope) {
+agtrApp.controller('questionsController', ['$scope', 'questionsService', function($scope, questionsService) {
+    
+    $scope.questions = questionsService.questions;
     
     $scope.yesClick = function() {
         console.log("YES was clicked");
@@ -19,27 +21,6 @@ agtrApp.controller('questionsController', ['$scope', function($scope) {
     $scope.test = 'Test';
     
     $scope.newQuestion = '';
-    
-    $scope.questions = [
-        {
-            id: 1,
-            query: "test question 1",
-            user_id: 1,
-            group: "Group1"
-        },
-          {
-            id: 2,
-            query: "test question 2",
-            user_id: 2,
-            group: "Group2"
-        },
-          {
-            id: 3,
-            query: "test question 3",
-            user_id: 3,
-            group: "Group3"
-        },
-    ];
     
 }]);
 
