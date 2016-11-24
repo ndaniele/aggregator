@@ -12,7 +12,10 @@
                     <div class="panel-body">
                       <a ng-click="yesClick()" class="btn btn-primary">YES {{city}}</a>
                         <a ng-click="noClick()" class="btn btn-primary">NO {{city}}</a>
+                        <input type="text" placeholder="comment" ng-model="comment" class="form-control" />
+                        <a ng-click="postComment()" class="btn btn-primary">Post {{comment}}</a>
                     </div>
+                    <h3>{{comment}}</h3>
                 </div> 
                
             </div>

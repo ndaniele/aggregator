@@ -10,6 +10,12 @@ agtrApp.controller('questionsController', ['$scope', '$http', 'questionsService'
     
     $scope.questions = questionsService.questions;
     
+    $scope.comment = '';
+    
+    $scope.postComment = function() {
+        console.log("Comment Was Posted")
+    };
+    
     $scope.yesClick = function() {
         console.log("YES was clicked");
     };
