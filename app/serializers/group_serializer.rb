@@ -1,4 +1,4 @@
 class GroupSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :groupname
   has_many :questions
 end
