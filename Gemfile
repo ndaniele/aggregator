@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'pry'
+
 gem 'responders'
 
 gem 'active_model_serializers'
