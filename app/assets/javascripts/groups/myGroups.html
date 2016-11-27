@@ -1,0 +1,15 @@
+<h1>My Groups</h1>
+
+<div ng-repeat="group in groups">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <input ng-click="checkClick(group.name)" type="checkbox" aria-label="..."> {{ group.name}}
+                  </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+       
+        </div>
+    </div>
+<a ng-click="postClick()" class="btn btn-primary">POST</a>
