@@ -10,7 +10,7 @@ angular
     .state('home', {
         url: '/',
         templateUrl: 'home/home.html',
-        controller: 'homeController as vm'
+        controller: 'homeController'
     })
          .state('home.questions', {
                 url: 'questions',

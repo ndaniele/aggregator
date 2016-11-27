@@ -4,11 +4,11 @@ angular
 
 //CONTROLLER
 
-    .controller('questionsController', ['$scope', '$http', 'questionsService', function($scope, $http, questionsService) {
+    .controller('questionsController', ['$scope', 'questionsService', function($scope, questionsService) {
     
     $scope.name = "Nick is asking a question"
         
-    $scope.questions = questionsService.questions;
+    $scope.questions = questionsService.getQuestions();
     
     $scope.comment = '';
     

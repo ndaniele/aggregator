@@ -3,29 +3,24 @@ angular
     .module('agtrApp')
 
 //SERVICES
-    .service('questionsService', function() {
+    .service('questionsService', ['$http', function($http) {
     
-        this.questions = [
-            {
-                id: 1,
-                query: "test question 1",
-                user_id: 1,
-                group: "Group1"
-            },
-              {
-                id: 2,
-                query: "test question 2",
-                user_id: 2,
-                group: "Group2"
-            },
-              {
-                id: 3,
-                query: "test question 3",
-                user_id: 3,
-                group: "Group3"
-            },
-        ];
-    })
+    this.getQuestions = function() {
+            return $http.get('/questions')
+                        .then(handleResponse)
+                        .catch(handleError)
+        }
+
+        function handleResponse(response) {
+            console.log(response)
+            return response.data  
+        }
+
+        function handleError(error) {
+            console.log(error)
+        }
+    
+    }])
 
     .service('groupService', function() {
     
