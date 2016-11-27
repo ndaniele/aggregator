@@ -24,6 +24,18 @@ angular
             controller: 'groupController'
         })
     
+         .state('home.allGroups', {
+            url: 'allgroups',
+            templateUrl: 'groups/allGroups.html',
+            controller: 'groupController'
+        })
+    
+        .state('home.newGroup', {
+            url: 'group/new',
+            templateUrl: 'groups/newGroup.html',
+            controller: 'groupController'
+        })  
+    
     $urlRouterProvider.otherwise('/')
     
 })
