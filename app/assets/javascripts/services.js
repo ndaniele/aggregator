@@ -3,22 +3,16 @@ angular
     .module('agtrApp')
 
 //SERVICES
-    .service('questionsService', ['$http', function($http) {
-    
-    this.getQuestions = function() {
-            return $http.get('/questions')
-                        .then(handleResponse)
-                        .catch(handleError)
-        }
-
-        function handleResponse(response) {
-            console.log(response)
-            return response.data  
-        }
-
-        function handleError(error) {
-            console.log(error)
-        }
+    .service('QuestionsService', ['$http', function($http) {
+        
+        this.getQuestions = function() {
+           return $http.get('/questions');
+       };
+        
+        this.createQuestion = function(newQuestion) {
+            return $http.post('/questions', {query: newQuestion, user_id: 1});
+        };
+   
     
     }])
 

@@ -19,21 +19,27 @@ class QuestionsController < ApplicationController
         @question = Question.new 
         @question.answers.build
     end
-
-    def create
-        #raise params.inspect
-        @question = current_user.asked_questions.build(question_params)
-        @group = Group.find_by(:id => params[:question][:group_id])
-        if 
-            @question.save
-            @group_question = GroupQuestion.create(:group_id => @group.id, :question_id => @question.id)
-            #redirect_to questions_path 
-            render json: @question, status: 201
-        else
-            flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
-            redirect_to new_question_path(:group => @group.id)
-        end
+    
+    
+    def create    
+        question = Question.create(question_params)
+        render json: question
     end
+
+  #  def create
+  #      #raise params.inspect
+  #      @question = current_user.asked_questions.build(question_params)
+  #      @group = Group.find_by(:id => params[:question][:group_id])
+  #      if 
+  #          @question.save
+  #          @group_question = GroupQuestion.create(:group_id => @group.id, :question_id => @question.id)
+  #          #redirect_to questions_path 
+  #          render json: @question, status: 201
+  #      else
+  #          flash[:error] = "#{@question.errors.full_messages.join(" & ")}"
+  #          redirect_to new_question_path(:group => @group.id)
+  #      end
+  #  end
 
     def update
         @question = Question.find(params[:id])

@@ -3,8 +3,9 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <h4>Ask A New Question: {{ newQuestion }}</h4>
-        <div class="form-group">
+        <div ng-controller="questionsController" class="form-group">
             <input type="text" ng-model="newQuestion" class="form-control" />
+            <a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">Create Question {{newQuestion}}</a>
         </div>
         <a ui-sref="home.myGroups" class="btn btn-primary">Post To Group/s</a>
         
