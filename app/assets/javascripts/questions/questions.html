@@ -1,10 +1,6 @@
 <h1>Questions for you to Answer</h1>
 
-<h1>{{name}}'s Questions:{{ questions }} </h1>
-
-<div ng-repeat="question in questions">
-    {{question.query}}
-</div>
+<a ng-click="getQuestions()" class="btn btn-primary">get questions</a>
 
 <div ng-repeat="question in questions">
         <div class="row">
