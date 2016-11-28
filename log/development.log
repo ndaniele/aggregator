@@ -7993,3 +7993,284 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 365ms (Views: 274.0ms | ActiveRecord: 34.3ms)
 
 
+Started GET "/" for ::1 at 2016-11-28 12:59:53 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.1ms)
+Completed 200 OK in 2808ms (Views: 2799.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:01:05 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (4.4ms)
+Completed 200 OK in 2789ms (Views: 2783.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:01:26 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 1866ms (Views: 1862.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:02:44 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.6ms)
+Completed 200 OK in 2946ms (Views: 2940.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:03:26 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (1.1ms)
+Completed 200 OK in 2278ms (Views: 2274.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:03:31 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.84ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:04:11 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 2621ms (Views: 2618.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:04:16 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (16.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.52ms)
+Completed 200 OK in 31ms (Views: 13.0ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:04:34 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 2069ms (Views: 2065.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:04:39 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.58ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:06:01 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 3123ms (Views: 3119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:06:07 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.43ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:06:14 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.36ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:07:20 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.7ms)
+Completed 200 OK in 3106ms (Views: 3102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:34 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (10.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.7ms)
+Completed 200 OK in 34ms (Views: 20.1ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:36 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.62ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:37 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.51ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:37 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.72ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:37 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.65ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:37 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.98ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:38 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.06ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:38 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.81ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:38 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.06ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:38 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.2ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:38 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.48ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:39 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.23ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:39 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.04ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:39 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.95ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:07:39 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.43ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:08:11 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (1.0ms)
+Completed 200 OK in 1096ms (Views: 1092.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:08:14 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.37ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:08:34 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.99ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:08:46 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.66ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
