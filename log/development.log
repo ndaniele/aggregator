@@ -8306,3 +8306,251 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2016-11-28 13:16:16 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.9ms)
+Completed 200 OK in 3196ms (Views: 3189.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:16:45 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.4ms)
+Completed 200 OK in 2104ms (Views: 2101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:17:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (3.6ms)
+Completed 200 OK in 4118ms (Views: 4112.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:18:01 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 3047ms (Views: 3044.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:19:23 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.2ms)
+Completed 200 OK in 2875ms (Views: 2867.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:19:33 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 200ms (Views: 197.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:19:37 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (2.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.6ms)
+Completed 200 OK in 40ms (Views: 35.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:20:21 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.4ms)
+Completed 200 OK in 2755ms (Views: 2751.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:20:26 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.17ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:20:28 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (9.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.99ms)
+Completed 200 OK in 37ms (Views: 25.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:24:19 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.2ms)
+Completed 200 OK in 3331ms (Views: 3309.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:24:29 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.98ms)
+Completed 200 OK in 93ms (Views: 87.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:25:03 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.6ms)
+Completed 200 OK in 2982ms (Views: 2975.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:25:07 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (7.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.7ms)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:25:09 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (3.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.5ms)
+Completed 200 OK in 83ms (Views: 74.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:26:06 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (3.7ms)
+Completed 200 OK in 3557ms (Views: 3547.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:26:11 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (83.12ms)
+Completed 200 OK in 89ms (Views: 86.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:26:14 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.29ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:27:03 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.5ms)
+Completed 200 OK in 2767ms (Views: 2757.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:27:07 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.72ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:27:08 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (47.48ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:27:13 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.28ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:27:15 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.82ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:27:43 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.7ms)
+Completed 200 OK in 2509ms (Views: 2505.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:27:55 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.58ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-28 13:28:02 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.37ms)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:28:15 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.48ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:28:20 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (5.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (26.18ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 6.4ms)
+
+

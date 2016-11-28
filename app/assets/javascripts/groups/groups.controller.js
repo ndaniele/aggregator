@@ -9,7 +9,7 @@ angular
         
         //$scope.groups = groupService.groups;
         
-        $scope.groups = '';
+        //$scope.groups = '';
 
         $scope.newGroup = '';
 
@@ -29,13 +29,15 @@ angular
             console.log(groupName + " was created");
         };
         
-        $scope.getGroups = function() {
-  return $http.get('/groups')
-                       .then(function(result) {
-                        console.log(result.data);
-                         //return $scope.httpQuestions = result.data
-                         $scope.groups = result.data
-                       })
+activate()
+
+function activate() {
+   return $http.get('/groups')
+                      .then(function(result) {
+                       //console.log(result.data);
+                       return $scope.groups = result.data
+                      })
 }
+        
 }]);
 
