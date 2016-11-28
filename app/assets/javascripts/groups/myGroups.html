@@ -1,11 +1,14 @@
 <h1>My Groups</h1>
 
+<a ng-click="getGroups()" class="btn btn-primary">get all groups</a>
+
+
 <div ng-repeat="group in groups">
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
                   <span class="input-group-addon">
-                    <input ng-click="checkClick(group.name)" type="checkbox" aria-label="..."> {{ group.name}}
+                    <input ng-click="checkClick(group.groupname)" type="checkbox" aria-label="..."> {{ group.groupname}}
                   </span>
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->

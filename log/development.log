@@ -8274,3 +8274,35 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2016-11-28 13:11:07 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (9.6ms)
+Completed 200 OK in 3920ms (Views: 3914.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:11:14 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.24ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-28 13:11:26 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.6ms)
+Completed 200 OK in 1939ms (Views: 1935.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-28 13:11:30 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.09ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.7ms)
+
+
