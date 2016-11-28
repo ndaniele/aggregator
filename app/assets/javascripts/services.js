@@ -22,20 +22,13 @@ angular
     
     }])
 
-    .service('groupService', function() {
+    .service('GroupService', ['$http', function($http) {
     
-        this.groups = [
-            {
-                name: 'testGroup1',
-                members: 'member1, member2'
-            },
-            {
-                name: 'testGroup2',
-                members: 'member3, member4'
-            },
-            {
-                name: 'testGroup3',
-                members: 'member5, member6'
-            },
-        ]
-    })
+       this.getGroups = function() {
+           return $http.get('/groups');
+       };
+        
+        this.createGroup = function(newGroup) {
+            return $http.post('/groups', {groupname: newGroup});
+        };
+    }])
