@@ -4,7 +4,7 @@ angular
 
 //CONTROLLER
 
-    .controller('questionsController', ['$scope', 'QuestionsService', function($scope, QuestionsService) {
+    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', function($scope, $rootScope, QuestionsService) {
         
     $scope.name = "Nick is asking a question"
     
@@ -20,7 +20,7 @@ angular
         
         $scope.makeNewQuestion = function() {
             QuestionsService
-                .createQuestion($scope.newQuestion, $scope.checkedGroups)
+                .createQuestion($scope.newQuestion, $rootScope.checkedGroups)
                 .then(function() {
                     alert('Question Created!');
             });

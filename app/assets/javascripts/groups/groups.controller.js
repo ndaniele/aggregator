@@ -3,9 +3,9 @@ angular
     .module('agtrApp')
 
 //CONTROLLER
-    .controller('groupController', ['$scope', 'GroupService', function($scope, GroupService) {
+    .controller('groupController', ['$scope', '$rootScope', 'GroupService', function($scope, $rootScope, GroupService) {
         
-        $scope.checkedGroups = [];
+        $rootScope.checkedGroups = [];
         
         $scope.groups = '';
         
@@ -29,8 +29,8 @@ angular
             console.log("POST was clicked");
         };
 
-        $scope.checkClick = function(groupName) {
-            $scope.checkedGroups.push(groupName);
+        $scope.checkClick = function(groupId) {
+            $rootScope.checkedGroups.push(groupId);
             console.log($scope.checkedGroups);
             //console.log(groupName + " box was checked");
         };

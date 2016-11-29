@@ -1,3 +1,4 @@
+require 'pry'
 class QuestionsController < ApplicationController
     #before_action: :authenticate_user! #, only: [:create, :update, :destroy]
     
@@ -35,10 +36,13 @@ class QuestionsController < ApplicationController
        #group = Group.find_by(:id => params[:group_id])
         if 
             question.save
-                groupArray = [:groups]
-                groupArray.each { |groupname| 
-                    group = Group.find_by(groupname: groupname)
-                    GroupQuestion.create(group_id: group.id, question_id: question.id )
+                groupArray = params["groups"]
+                groupArray.each { |id| 
+                    
+                binding.pry
+                    groupid = id 
+                    #group = Group.find_by(id: groupid)
+                    GroupQuestion.create(group_id: groupid, question_id: question.id )
                 }
             
             
