@@ -1,3 +1,4 @@
+require 'pry'
 class AnswersController < ApplicationController
 
   def new
@@ -22,6 +23,7 @@ class AnswersController < ApplicationController
   end
 
   def create
+      binding.pry
     @question =  Question.find_by(id: params[:question_id])
     @answer = @question.answers.build(answer_params)
     @answer.user_id = current_user.id #session[:user_id]

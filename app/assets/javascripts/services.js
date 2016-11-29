@@ -27,15 +27,14 @@ angular
         };
     }])
 
-   .service('GroupQuestionsService', ['$http', function($http) {
-        
-        //this.getGroupQuestions = function() {
-          // return $http.get('/questions');
-      // };
-        
-        this.createGroupQuestion = function(newGroupQuestion) {
-            return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7 });
-        };
-   
+
+ .service('AnswerService', ['$http', function($http) {
     
+       //this.getGroups = function() {
+         //  return $http.get('/groups');
+       //};
+        
+        this.createAnswer = function(newAnswer, questionId) {
+            return $http.post('/questions/' + questionId + '/answers', {input: newAnswer, question_id: questionId});
+        };
     }])

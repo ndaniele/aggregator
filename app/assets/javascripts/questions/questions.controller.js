@@ -4,7 +4,7 @@ angular
 
 //CONTROLLER
 
-    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', function($scope, $rootScope, QuestionsService) {
+    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', 'AnswerService', function($scope, $rootScope, QuestionsService, AnswerService) {
         
     $scope.name = "Nick is asking a question"
     
@@ -28,13 +28,27 @@ angular
 
     
     $scope.comment = '';
+        
+        
+    $scope.newAnswer = '';
+
+    $scope.makeNewAnswer = function(questionId) {
+        $scope.newAnswer = 'Yes!!';
+        //console.log(questionId);
+        
+        AnswerService
+            .createAnswer($scope.newAnswer, questionId)
+            .then(function() {
+                alert('You Answered This Question');
+        });
+    };
     
     $scope.postComment = function() {
         console.log("Comment Was Posted")
     };
     
-    $scope.yesClick = function() {
-        console.log("YES was clicked");
+    $scope.yesClick = function(question) {
+        console.log("yes was clicked on " + question);
     };
     
     $scope.noClick = function() {
