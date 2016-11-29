@@ -32,14 +32,25 @@ angular
         
     $scope.newAnswer = '';
 
-    $scope.makeNewAnswer = function(questionId) {
+    $scope.makeNewYesAnswer = function(questionId) {
         $scope.newAnswer = 'Yes';
         console.log(questionId);
         
         AnswerService
             .createAnswer($scope.newAnswer, questionId)
             .then(function() {
-                alert('You Answered This Question');
+                alert('You Answered Yes to This Question');
+        });
+    };
+    
+    $scope.makeNewNoAnswer = function(questionId) {
+        $scope.newAnswer = 'No';
+        console.log(questionId);
+        
+        AnswerService
+            .createAnswer($scope.newAnswer, questionId)
+            .then(function() {
+                alert('You Answered NO to This Question');
         });
     };
     
