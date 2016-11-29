@@ -9,8 +9,8 @@ angular
            return $http.get('/questions');
        };
         
-        this.createQuestion = function(newQuestion) {
-            return $http.post('/questions', {query: newQuestion, user_id: 1});
+        this.createQuestion = function(newQuestion, checkedGroups) {
+            return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7, groups: checkedGroups });
         };
    
     
@@ -25,4 +25,17 @@ angular
         this.createGroup = function(newGroup) {
             return $http.post('/groups', {groupname: newGroup});
         };
+    }])
+
+   .service('GroupQuestionsService', ['$http', function($http) {
+        
+        //this.getGroupQuestions = function() {
+          // return $http.get('/questions');
+      // };
+        
+        this.createGroupQuestion = function(newGroupQuestion) {
+            return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7 });
+        };
+   
+    
     }])

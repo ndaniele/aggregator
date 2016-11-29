@@ -5,6 +5,8 @@ angular
 //CONTROLLER
     .controller('groupController', ['$scope', 'GroupService', function($scope, GroupService) {
         
+        $scope.checkedGroups = [];
+        
         $scope.groups = '';
         
         GroupService
@@ -28,7 +30,9 @@ angular
         };
 
         $scope.checkClick = function(groupName) {
-            console.log(groupName + " box was checked");
+            $scope.checkedGroups.push(groupName);
+            console.log($scope.checkedGroups);
+            //console.log(groupName + " box was checked");
         };
 
         $scope.joinClick = function(groupName) {

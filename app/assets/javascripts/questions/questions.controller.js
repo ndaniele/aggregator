@@ -20,7 +20,7 @@ angular
         
         $scope.makeNewQuestion = function() {
             QuestionsService
-                .createQuestion($scope.newQuestion)
+                .createQuestion($scope.newQuestion, $scope.checkedGroups)
                 .then(function() {
                     alert('Question Created!');
             });
