@@ -25,6 +25,10 @@ angular
         this.createGroup = function(newGroup) {
             return $http.post('/groups', {groupname: newGroup});
         };
+        
+        this.createGroupMembership = function(groupid) {
+            return $http.post('/groups/join', {group_id: groupid, user_id: 1})
+        };
     }])
 
 

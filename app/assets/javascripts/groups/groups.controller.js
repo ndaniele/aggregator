@@ -24,6 +24,16 @@ angular
                     alert('Group Created!');
             });
         };
+        
+        $scope.newGroupMember = '';
+        
+        $scope.makeNewGroupMemebership = function(groupid) { console.log(groupid);
+            GroupService
+                .createGroupMembership(groupid)
+                .then(function() {
+                    alert('Group joined!');
+            });
+        };
 
         $scope.postClick = function() {
             console.log("POST was clicked");

@@ -1,3 +1,4 @@
+require 'pry'
 class GroupsController < ApplicationController
     #before_action: :authenticate_user! #, only: [:edit]
     
@@ -13,8 +14,16 @@ class GroupsController < ApplicationController
     
     def create    
         group = Group.create(group_params)
+        #if group.save
         #group.memberships.build(:user_id => params[:group][:user_id], :group_id => @group.id).save
         render json: group #, status: 201
+    end
+        
+    def createMembership
+        #binding.pry
+        #userId = params["user_id"]
+        group = Group.find_by_id(params[:group_id])
+        group.memberships.build(:user_id => params["user_id"], :group_id => params["group_id"]).save
     end
     
     def update

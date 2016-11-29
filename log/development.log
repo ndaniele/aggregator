@@ -15029,3 +15029,946 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 132ms (Views: 124.8ms | ActiveRecord: 6.7ms)
 
 
+Started GET "/groups" for ::1 at 2016-11-29 17:25:37 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (78.74ms)
+Completed 200 OK in 135ms (Views: 88.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:25:48 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (114.93ms)
+Completed 200 OK in 125ms (Views: 117.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:26:15 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (2.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (65.46ms)
+Completed 200 OK in 79ms (Views: 74.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 17:41:57 -0500
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.6ms)
+Completed 200 OK in 2404ms (Views: 2390.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:42:00 -0500
+Started GET "/groups" for ::1 at 2016-11-29 17:42:01 -0500
+Processing by QuestionsController#index as HTML
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (153.4ms)
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (1.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (197.58ms)
+Completed 200 OK in 1503ms (Views: 1392.5ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:42:07 -0500
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.6ms)
+Started GET "/" for ::1 at 2016-11-29 17:42:14 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.6ms)
+Completed 200 OK in 144ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:42:15 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (177.13ms)
+Completed 200 OK in 182ms (Views: 174.6ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:42:18 -0500
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.7ms)
+Started GET "/questions" for ::1 at 2016-11-29 17:42:31 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (16.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (130.64ms)
+Completed 200 OK in 156ms (Views: 122.9ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:42:33 -0500
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:43: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.4ms)
+Started GET "/" for ::1 at 2016-11-29 17:43:53 -0500
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.5ms)
+Completed 200 OK in 516ms (Views: 507.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:43:54 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (236.51ms)
+Completed 200 OK in 303ms (Views: 259.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:43:56 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (40.39ms)
+Completed 200 OK in 89ms (Views: 51.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 17:43:57 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (80.42ms)
+Completed 200 OK in 85ms (Views: 82.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 17:46:04 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.4ms)
+Completed 200 OK in 2215ms (Views: 2211.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:46:07 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (5.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+Started GET "/groups" for ::1 at 2016-11-29 17:46:07 -0500
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (2.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (81.61ms)
+Completed 200 OK in 93ms (Views: 91.1ms | ActiveRecord: 1.5ms)
+
+
+[active_model_serializers]   [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (299.06ms)
+Completed 200 OK in 304ms (Views: 286.0ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 17:47:01 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (1.0ms)
+Completed 200 OK in 1981ms (Views: 1976.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 17:47:04 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+Started GET "/groups" for ::1 at 2016-11-29 17:47:04 -0500
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (1.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (81.2ms)
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 2.1ms)
+
+
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (8.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.5ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (321.34ms)
+Completed 200 OK in 328ms (Views: 307.7ms | ActiveRecord: 19.0ms)
+
+
+Started POST "/groups" for ::1 at 2016-11-29 17:47:09 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"group_id"=>8, "user_id"=>1, "group"=>{}}
+Started GET "/" for ::1 at 2016-11-29 18:07:50 -0500
+Completed 400 Bad Request in 1257996ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: group):
+  
+app/controllers/groups_controller.rb:41:in `group_params'
+app/controllers/groups_controller.rb:17:in `create'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.6ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (181.0ms)
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.6ms)
+Completed 200 OK in 2316ms (Views: 2305.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 18:08:12 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+Started GET "/groups" for ::1 at 2016-11-29 18:08:12 -0500
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (140.1ms)
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1018.0ms)
+Completed 200 OK in 1174ms (Views: 1124.4ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/" for ::1 at 2016-11-29 18:10:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (28.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.3ms)
+Completed 200 OK in 4872ms (Views: 4836.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 18:11:03 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (349.18ms)
+Completed 200 OK in 635ms (Views: 567.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 18:11:06 -0500
+  
+SyntaxError (/Users/ntd/Development/final-project/aggregator/app/controllers/groups_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/groups_controller.rb:46: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.4ms)
+Started GET "/" for ::1 at 2016-11-29 18:12:14 -0500
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.4ms)
+Completed 200 OK in 475ms (Views: 466.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 18:12:16 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+Started GET "/groups" for ::1 at 2016-11-29 18:12:16 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (237.51ms)
+Completed 200 OK in 310ms (Views: 271.1ms | ActiveRecord: 10.2ms)
+
+
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (266.9ms)
+Completed 200 OK in 327ms (Views: 304.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/groups" for ::1 at 2016-11-29 18:12:18 -0500
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.32ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/groups/join" for ::1 at 2016-11-29 18:12:26 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/groups/join"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered collection of /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [45 times] (22.6ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (74.7ms)
+  Rendering /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/ntd/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (293.4ms)
+Started GET "/" for ::1 at 2016-11-29 18:13:14 -0500
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (0.4ms)
+Completed 200 OK in 3843ms (Views: 3756.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 18:13:23 -0500
+Started GET "/groups" for ::1 at 2016-11-29 18:13:23 -0500
+Processing by GroupsController#index as HTML
+Processing by QuestionsController#index as HTML
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (190.69ms)
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+Completed 200 OK in 435ms (Views: 330.8ms | ActiveRecord: 3.7ms)
+
+
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (373.25ms)
+Completed 200 OK in 610ms (Views: 495.8ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/groups/join" for ::1 at 2016-11-29 18:14:11 -0500
+Processing by GroupsController#createMembership as HTML
+  Parameters: {"group_id"=>5, "user_id"=>1, "group"=>{}}
+No template found for GroupsController#createMembership, rendering head :no_content
+Completed 204 No Content in 225840ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mMembership Load (18.3ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships"[0m
+Started GET "/" for ::1 at 2016-11-29 18:19:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (20.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: after_filter is deprecated and will be removed in Rails 5.1. Use after_action instead. (called from <class:ApplicationController> at /Users/ntd/Development/final-project/aggregator/app/controllers/application_controller.rb:4)
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html within layouts/application
+  Rendered application/index.html within layouts/application (2.7ms)
+Completed 200 OK in 3684ms (Views: 3637.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for ::1 at 2016-11-29 18:19:07 -0500
+Processing by QuestionsController#index as HTML
+Started GET "/groups" for ::1 at 2016-11-29 18:19:07 -0500
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+Processing by GroupsController#index as HTML
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 6]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 7]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 8]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 9]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 10]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 11]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 12]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 13]]
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 14]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 15]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 16]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 17]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 18]]
+[active_model_serializers]   [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 19]]
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."question_id" = ?[0m  [["question_id", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (350.1ms)
+Completed 200 OK in 551ms (Views: 489.3ms | ActiveRecord: 10.2ms)
+
+
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 1]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 2]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 3]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 4]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 5]]
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 7]]
+[active_model_serializers]   [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" INNER JOIN "group_questions" ON "questions"."id" = "group_questions"."question_id" WHERE "group_questions"."group_id" = ?[0m  [["group_id", 8]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (277.01ms)
+Completed 200 OK in 459ms (Views: 367.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/groups/join" for ::1 at 2016-11-29 18:19:47 -0500
+Processing by GroupsController#createMembership as HTML
+  Parameters: {"group_id"=>8, "user_id"=>1, "group"=>{}}
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMembership Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "memberships" WHERE "memberships"."user_id" = ? AND "memberships"."group_id" = ? LIMIT ?[0m  [["user_id", 1], ["group_id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "memberships" ("user_id", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["group_id", 8], ["created_at", 2016-11-29 23:19:47 UTC], ["updated_at", 2016-11-29 23:19:47 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for GroupsController#createMembership, rendering head :no_content
+Completed 204 No Content in 331ms (ActiveRecord: 22.5ms)
+
+
+  [1m[36mMembership Load (0.4ms)[0m  [1m[34mSELECT "memberships".* FROM "memberships"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = ?[0m  [["user_id", 1]]
