@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
                 groupArray = params["groups"]
                 groupArray.each { |id| 
                     
-                binding.pry
+                #binding.pry
                     groupid = id 
                     #group = Group.find_by(id: groupid)
                     GroupQuestion.create(group_id: groupid, question_id: question.id )

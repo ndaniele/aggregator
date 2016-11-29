@@ -22,7 +22,7 @@ angular
             QuestionsService
                 .createQuestion($scope.newQuestion, $rootScope.checkedGroups)
                 .then(function() {
-                    alert('Question Created!');
+                    alert('Question Created and added to groups!');
             });
         };
 
