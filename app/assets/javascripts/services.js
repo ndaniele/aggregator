@@ -35,6 +35,6 @@ angular
        //};
         
         this.createAnswer = function(newAnswer, questionId) {
-            return $http.post('/questions/' + questionId + '/answers', {input: newAnswer, question_id: questionId});
+            return $http.post('/questions/' + questionId + '/answers', {input: newAnswer, question_id: questionId, user_id: 1});
         };
     }])

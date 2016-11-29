@@ -23,16 +23,16 @@ class AnswersController < ApplicationController
   end
 
   def create
-      binding.pry
-    @question =  Question.find_by(id: params[:question_id])
-    @answer = @question.answers.build(answer_params)
-    @answer.user_id = current_user.id #session[:user_id]
+      #binding.pry
+    question =  Question.find_by(id: params[:question_id])
+    answer = question.answers.build(answer_params)
+    answer.user_id = params["user_id"] #session[:user_id]
     if
-      @answer.save
-      redirect_to question_answer_path(@question, @answer)
-    else
-      flash[:error] = "!!You can only answer a question once!!"
-      redirect_to question_path(@question)
+      answer.save
+      render json: question
+    #else
+    #  flash[:error] = "!!You can only answer a question once!!"
+    #  redirect_to question_path(@question)
     end
   end
 

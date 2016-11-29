@@ -33,8 +33,8 @@ angular
     $scope.newAnswer = '';
 
     $scope.makeNewAnswer = function(questionId) {
-        $scope.newAnswer = 'Yes!!';
-        //console.log(questionId);
+        $scope.newAnswer = 'Yes';
+        console.log(questionId);
         
         AnswerService
             .createAnswer($scope.newAnswer, questionId)
