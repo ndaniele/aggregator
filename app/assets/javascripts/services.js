@@ -6,7 +6,7 @@ angular
     .service('QuestionsService', ['$http', function($http) {
         
         this.getQuestions = function() {
-           return $http.get('/questions');
+           return $http.get('/questions/my_questions');
        };
         
         this.createQuestion = function(newQuestion, checkedGroups) {

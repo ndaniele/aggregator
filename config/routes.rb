@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     
   get '/groups/my_groups' => 'groups#my_groups'
     
+  get '/questions/my_questions' => 'questions#my_questions'
+    
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     

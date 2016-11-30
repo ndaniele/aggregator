@@ -22,6 +22,20 @@ class QuestionsController < ApplicationController
     end
     
     
+    def my_questions
+        #binding.pry
+        #user = current_user
+        current_user = User.find_by(id: 1)
+        myQuestions = []
+        userQuestions = current_user.groups.each do |group|
+            group.group_questions.each do |groupQuestion|
+                myQuestions << groupQuestion.question
+            end
+        end       
+        render json: myQuestions
+    end
+    
+    
     #def create 
         #raise params.inspect
         #question = Question.create(question_params)
