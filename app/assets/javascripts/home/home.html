@@ -5,20 +5,17 @@
         <h4>Ask A New Question: {{ newQuestion }}</h4>
         <div ng-controller="questionsController" class="form-group">
             <input type="text" ng-model="newQuestion" class="form-control" />
-           
             
-            <div ng-controller="groupController">
-                <div ng-repeat="group in myGroups">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                              <span class="input-group-addon">
-                                <input ng-click="checkClick(group.id)" type="checkbox" aria-label="..."> {{ group.groupname}}
-                              </span>
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-lg-6 -->
-                    </div>
-                </div>
+            <div class="dropdown" ng-controller="groupController">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Select Groups
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <div ng-repeat="group in myGroups">
+                      <input ng-click="checkClick(group.id)" type="checkbox" aria-label="..."> {{ group.groupname}}
+                  </div>
+              </ul>
             </div>
              
             <a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">POST "{{newQuestion}}" to Selected Groups</a>
