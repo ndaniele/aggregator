@@ -37,6 +37,14 @@ class GroupsController < ApplicationController
         render json: group
     end
     
+    def my_groups
+        #binding.pry
+        #user = current_user
+        current_user = User.find_by(id: 1)
+        userGroups = current_user.groups
+        render json: userGroups
+    end
+    
     def destroy
     end
     

@@ -22,6 +22,10 @@ angular
            return $http.get('/groups');
        };
         
+        this.getMyGroups = function() {
+           return $http.get('/groups/my_groups');
+       };
+        
         this.createGroup = function(newGroup) {
             return $http.post('/groups', {groupname: newGroup});
         };

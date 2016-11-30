@@ -7,6 +7,14 @@ angular
         
         $rootScope.checkedGroups = [];
         
+        $scope.myGroups = '';
+        
+        GroupService
+            .getMyGroups()
+            .then(function(response) {
+                $scope.myGroups = response.data;
+        });
+        
         $scope.groups = '';
         
         GroupService
