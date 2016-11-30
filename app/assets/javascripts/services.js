@@ -50,3 +50,26 @@ angular
             return $http.post('/questions/' + questionId + '/answers', {input: newAnswer, question_id: questionId, user_id: 1});
         };
     }])
+
+.service('QuestionStatsService', [ function() {
+    
+        this.makeStats = function(questionAnswers) {
+           questionAnswers.forEach(function(answer) {
+               var yesArray = [];
+               var noArray = [];
+               if (answer === "Yes") {
+                   yesArray.push(answer);
+               };
+               if (answer === "No") {
+                   noArray.push(answer);
+               };
+               if (yesArray.length > noArray.length) {
+                   message = "yes is the winner!";
+               } else {
+                   message = "no is the winner";
+               };
+               
+               return message;
+               console.log(message);
+            });
+    }])

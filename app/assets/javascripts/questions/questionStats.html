@@ -6,14 +6,19 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{question.query }}</h3>
+                        <hr />
                         <div ng-repeat="group in question.groups">
-                            <li>{{group.groupname}}</li>
+                            <li class="groupList">{{group.groupname}}</li>
                         </div>
                     </div>
                     <div class="panel-body">
                         <ul>
                             <div ng-repeat="answer in question.answers">
                                 <li>{{answer.input}}</li>
+                            </div>
+                            <hr />
+                            <div ng-repeat="comment in question.comments">
+                                <li>{{comment.comment}}</li>
                             </div>
                         </ul>
                     </div>
