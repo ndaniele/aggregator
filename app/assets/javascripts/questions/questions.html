@@ -5,7 +5,10 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{{question.query }} - {{ question.groups }}</h3>
+                        <h3 class="panel-title">{{question.query }}</h3>
+                        <div ng-repeat="group in question.groups">
+                            <li>{{group.groupname}}</li>
+                        </div>
                     </div>
                     <div class="panel-body">
                       <a ng-click="makeNewYesAnswer(question.id)" class="btn btn-primary">YES {{city}}</a>
