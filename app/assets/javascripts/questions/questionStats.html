@@ -1,0 +1,24 @@
+<h1>ANSWERS AND STATS FOR YOUR QUESTIONS</h1>
+
+<div ng-repeat="question in askedQuestions">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{question.query }}</h3>
+                        <div ng-repeat="group in question.groups">
+                            <li>{{group.groupname}}</li>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <div ng-repeat="answer in question.answers">
+                                <li>{{answer.input}}</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div> 
+               
+            </div>
+        </div>
+    </div>

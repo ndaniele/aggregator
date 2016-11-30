@@ -9,6 +9,10 @@ angular
            return $http.get('/questions/my_questions');
        };
         
+         this.getAskedQuestions = function() {
+           return $http.get('/questions/my_asked_questions');
+       };
+        
         this.createQuestion = function(newQuestion, checkedGroups) {
             return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7, groups: checkedGroups });
         };

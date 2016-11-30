@@ -15,6 +15,14 @@ angular
             .then(function(response) {
                 $scope.questions = response.data;
         });
+    
+     $scope.askedQuestions = '';
+        
+        QuestionsService
+            .getAskedQuestions()
+            .then(function(response) {
+                $scope.askedQuestions = response.data;
+        });
         
     $scope.newQuestion = '';
         

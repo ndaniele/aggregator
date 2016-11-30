@@ -17,6 +17,12 @@ angular
                 templateUrl: 'questions/questions.html',
                 controller: 'questionsController'
         })
+    
+        .state('home.questionStats', {
+                url: 'questions/stats',
+                templateUrl: 'questions/questionStats.html',
+                controller: 'questionsController'
+        })
         
         .state('home.myGroups', {
             url: 'mygroups',
