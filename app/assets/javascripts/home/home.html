@@ -15,6 +15,12 @@
                   <div ng-repeat="group in myGroups">
                       <input ng-click="checkClick(group.id)" type="checkbox" aria-label="..."> {{ group.groupname}}
                   </div>
+                  
+               <!--   <div ng-controller="questionsController" ng-model="newQuestion">
+                    <li role="separator" class="divider"></li>
+                    <li><a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">POST "{{newQuestion}}" to Selected Groups</a></li>
+                  </div> -->
+                  
               </ul>
             </div>
              
@@ -23,7 +29,7 @@
         </div>
         
         
-        <a ui-sref="home.myGroups" class="btn btn-primary">Post To Group/s</a>
+    <!--    <a ui-sref="home.myGroups" class="btn btn-primary">Post To Group/s</a> -->
         
         <a ui-sref="home.questions" class="btn btn-primary">Answer Questions</a>
         
