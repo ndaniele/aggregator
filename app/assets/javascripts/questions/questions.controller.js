@@ -39,8 +39,8 @@ angular
         $scope.getQuestionStats = function(questionAnswers) {
             QuestionsService
                 .makeStats(questionAnswers)
-                //.then(function() {
-                    //alert('a new test message');
+               // .then(function() {
+                //    alert('test');
             //});
         };
 
