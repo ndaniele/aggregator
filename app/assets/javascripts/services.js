@@ -37,7 +37,8 @@ angular
                    message = "no is the winner";
                };
                
-            console.log(message);
+            return message;
+            //console.log(message);
            //console.log(yesArray);
             //console.log(questionAnswers);
         };

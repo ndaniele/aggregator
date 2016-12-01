@@ -34,14 +34,13 @@ angular
             });
         };
     
-    //$scope.stats = '';
+    $scope.stats = '';
         
         $scope.getQuestionStats = function(questionAnswers) {
             QuestionsService
                 .makeStats(questionAnswers)
-               // .then(function() {
-                //    alert('test');
-            //});
+                console.log(message);
+            $scope.stats = message;
         };
 
     

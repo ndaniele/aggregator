@@ -16,8 +16,9 @@
                     <div class="panel-body">
                         <ul>
                             <label>Answers</label>
-                            {{question.answers}}
                              <a ng-click="getQuestionStats(question.answers)" class="btn btn-primary">STATS</a>
+                            
+                            <label ng-model="stats"></label>
                             
                             <div ng-repeat="answer in question.answers">
                                 <li>{{answer.input}}</li>
