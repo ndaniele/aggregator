@@ -5,20 +5,24 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
+                        <label>Question</label>
                         <h3 class="panel-title">{{question.query }}</h3>
                         <hr />
+                        <label>Was Posted to Groups:</label>
                         <div ng-repeat="group in question.groups">
                             <li class="groupList">{{group.groupname}}</li>
                         </div>
                     </div>
                     <div class="panel-body">
                         <ul>
+                            <label>Answers</label>
                              <a ng-click="getQuestionStats(question.answers)" class="btn btn-primary">STATS</a>
                             
                             <div ng-repeat="answer in question.answers">
                                 <li>{{answer.input}}</li>
                             </div>
                             <hr />
+                            <label>Comment History</label>
                             <div ng-repeat="comment in question.comments">
                                 <li>{{comment.comment}}</li>
                             </div>
