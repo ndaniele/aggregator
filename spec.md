@@ -11,7 +11,7 @@ Specs:
                 <div ui-view></div>
         
 
-- [ ] Must contain some sort of searching as well as filtering based on some
+- [x] Must contain some sort of searching as well as filtering based on some
 criteria. Ex: All items in the "fruit" category, or all tasks past due
     - serach box for searching all groups by name on allgroups.html: 
     
@@ -24,7 +24,20 @@ criteria. Ex: All items in the "fruit" category, or all tasks past due
 
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 
-- [] Data should be validated in Angular before submission
+- [x] Data should be validated in Angular before submission
+    - Vaidate the presence of a question. 
+            <form name="newQuestionForm">
+                <input 
+                    name="newQuestion" 
+                    required="required" 
+                    type="text" 
+                    ng-model="newQuestion" 
+                    class="form-control" />
+                
+                    <div ng-if="newQuestionForm.newQuestion.$touched && newQuestionForm.newQuestion.$error.required">
+                    Question is required!
+                    </div>
+                </form>
 
 - [x] Must talk to the Rails backend using $http and Services
     - all services use $http. for example:
