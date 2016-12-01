@@ -33,6 +33,16 @@ angular
                     alert('Question Created and added to groups!');
             });
         };
+    
+    //$scope.stats = '';
+        
+        $scope.getQuestionStats = function(questionAnswers) {
+            QuestionsService
+                .makeStats(questionAnswers)
+                //.then(function() {
+                    //alert('a new test message');
+            //});
+        };
 
     
     $scope.comment = '';
