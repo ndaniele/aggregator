@@ -18,24 +18,31 @@ angular
         };
         
         this.makeStats = function(questionAnswers) {
+            var stat = this;
+            stat.message = '';
+             
            questionAnswers.forEach(function(answer) {
-            //   var yesArray = [];
-            //   var noArray = [];
-            //   if (answer === "Yes") {
-            //       yesArray.push(answer);
-            //   };
-            //   if (answer === "No") {
-            //       noArray.push(answer);
-            //   };
-            //   if (yesArray.length > noArray.length) {
-            //       message = "yes is the winner!";
-            //   } else {
-            //       message = "no is the winner";
-            //   };
-            //   
-            //   return message;
-               console.log("test");
+               var yesArray = [];
+               var noArray = [];
+               if (answer === "Yes") {
+                   yesArray.push(answer);
+                   return yesArray;
+               };
+               if (answer === "No") {
+                   noArray.push(answer);
+                   return noAarray;
+               };
+               if (yesArray.length > noArray.length) {
+                   message = "yes is the winner!";
+               } else {
+                   message = "no is the winner";
+               };
+               
+               return message;
+               
             })
+           //console.log(stat.yesArray.length);
+           console.log(message);
         };
    
     
