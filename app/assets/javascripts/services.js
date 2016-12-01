@@ -17,36 +17,29 @@ angular
             return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7, groups: checkedGroups });
         };
         
-        var self = this;
-        self.yesArray = [];
-        self.noArray = [];
         
         this.makeStats = function(questionAnswers) {
-            //var stat = this;
-            //stat.message = '';
-            //var yesArray = [];
-           // var noArray = [];
+            var yesArray = [];
+            var noArray = [];
              
-           questionAnswers.forEach(function(answer) {
-               if (answer === "Yes") {
-                   self.yesArray.push(answer);
-                   //return yesArray;
+           questionAnswers.forEach(function(answer) {     
+               if (answer.input === "Yes") {
+                   yesArray.push(answer);
                };
-               if (answer === "No") {
-                   self.noArray.push(answer);
-                   //return noAarray;
+               if (answer.input === "No") {
+                   noArray.push(answer);
                };
-               if (self.yesArray.length > self.noArray.length) {
+            });
+            
+           if (yesArray.length > noArray.length) {
                    message = "yes is the winner!";
                } else {
                    message = "no is the winner";
                };
                
-               //return message;
-               //return yesArray;
-            })
-           //console.log(yesArray.length);
-           console.log(message);
+            console.log(message);
+           //console.log(yesArray);
+            //console.log(questionAnswers);
         };
    
     
