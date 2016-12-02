@@ -5,6 +5,17 @@ angular
 //CONTROLLER
     .controller('groupController', ['$scope', '$rootScope', 'GroupService', function($scope, $rootScope, GroupService) {
         
+//        $scope.groupFilter = function(arr) {
+//            return $scope.myGroups.filter(check)
+//            
+//            function check(group) {
+//                for  (var i = 0; i < arr.length) {
+//                    return group.groupname === arr[i].groupname
+//                } 
+//                    
+//            
+//        };
+        
         $rootScope.checkedGroups = [];
         
         $scope.myGroups = '';
@@ -12,7 +23,8 @@ angular
         GroupService
             .getMyGroups()
             .then(function(response) {
-                $scope.myGroups = response.data;
+                return $scope.myGroups = response.data;
+//                groupFilter(['first group'])
         });
         
         $scope.groups = '';
@@ -38,8 +50,9 @@ angular
         $scope.makeNewGroupMemebership = function(groupid) { console.log(groupid);
             GroupService
                 .createGroupMembership(groupid)
-                .then(function() {
+                .then(function(response) {
                     alert('Group joined!');
+                    return $scope.myGroups.push(response.data)
             });
         };
 

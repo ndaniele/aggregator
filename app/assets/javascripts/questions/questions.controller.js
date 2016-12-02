@@ -31,6 +31,7 @@ angular
                 .createQuestion($scope.newQuestion, $rootScope.checkedGroups)
                 .then(function() {
                     alert('Question Created and added to groups!');
+                    $scope.newQuestion = '';
             });
         };
     
@@ -40,6 +41,8 @@ angular
             QuestionsService
                 .makeStats(questionAnswers)
                 console.log(message);
+            //console.log(yesTotal);
+            //console.log(noTotal);
             $scope.stats = message;
         };
 
