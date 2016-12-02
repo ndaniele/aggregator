@@ -26,7 +26,7 @@
                             <hr />
                             <label>Comment History</label>
                             <div ng-repeat="comment in question.comments">
-                                <li>{{comment.comment}}</li>
+                                <li>{{comment.comment}} - {{comment.created_at | date:'MM/dd/yyyy @ h:mma' }}</li>
                             </div>
                         </ul>
                     </div>
