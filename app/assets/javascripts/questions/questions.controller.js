@@ -24,7 +24,7 @@ angular
                 $scope.askedQuestions = response.data;
         });
         
-    $scope.newQuestion = '';
+    $scope.newQuestion = '' + "?";
         
         $scope.makeNewQuestion = function() {
             QuestionsService
@@ -54,7 +54,7 @@ angular
 
     $scope.makeNewYesAnswer = function(questionId) {
         $scope.newAnswer = 'Yes';
-        console.log(questionId);
+        //console.log(questionId);
         
         AnswerService
             .createAnswer($scope.newAnswer, questionId)

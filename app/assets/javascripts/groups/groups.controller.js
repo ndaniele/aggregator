@@ -62,7 +62,7 @@ angular
 
         $scope.checkClick = function(groupId) {
             $rootScope.checkedGroups.push(groupId);
-            console.log($scope.checkedGroups);
+            //console.log($scope.checkedGroups);
             //console.log(groupName + " box was checked");
         };
 
