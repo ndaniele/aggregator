@@ -4,7 +4,7 @@ angular
 
 //CONTROLLER
 
-    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', 'AnswerService', function($scope, $rootScope, QuestionsService, AnswerService) {
+    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', 'AnswerService', 'CommentService', function($scope, $rootScope, QuestionsService, AnswerService, CommentService) {
         
     $scope.name = "Nick is asking a question"
     
@@ -48,6 +48,17 @@ angular
 
     
     $scope.comment = '';
+        
+       $scope.makeNewComment = function(comment, questionId) {
+        $scope.comment = comment;
+        //console.log(questionId);
+        
+        CommentService
+            .createComment($scope.comment, questionId)
+            .then(function() {
+                alert('You Commented On This Question');
+        });
+    };
         
         
     $scope.newAnswer = '';

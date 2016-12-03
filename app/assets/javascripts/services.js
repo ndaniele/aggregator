@@ -82,3 +82,14 @@ angular
             return $http.post('/questions/' + questionId + '/answers', {input: newAnswer, question_id: questionId, user_id: 1});
         };
     }])
+
+ .service('CommentService', ['$http', function($http) {
+    
+       //this.getGroups = function() {
+         //  return $http.get('/groups');
+       //};
+        
+        this.createComment = function(newComment, questionId) {
+            return $http.post('/questions/' + questionId + '/comments', {comment: newComment, question_id: questionId, user_id: 1});
+        };
+    }])

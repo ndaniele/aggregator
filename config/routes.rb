@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     resources :questions, :except => [:edit] do
         resources :answers, :only => [:show, :create, :new]
+        resources :comments, :only => [:show, :create, :new]
     end
 
     resources :groups do
