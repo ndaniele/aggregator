@@ -18,11 +18,12 @@
             </form>
             
             <div class="dropdown" ng-controller="groupController">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" ng-click="updateMyGroups()">
                 Select Groups
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  
                   <div ng-repeat="group in myGroups">
                       <input ng-click="checkClick(group.id)" type="checkbox" aria-label="..."> {{ group.groupname}}
                   </div>

@@ -16,6 +16,7 @@ angular
 //            
 //        };
         
+        
         $rootScope.checkedGroups = [];
         
         $scope.myGroups = '';
@@ -26,6 +27,29 @@ angular
                 return $scope.myGroups = response.data;
 //                groupFilter(['first group'])
         });
+        
+          $scope.updateMyGroups = function() {
+            GroupService
+                .getMyGroups()
+                .then(function(response) {
+                return $scope.myGroups = response.data;
+//                groupFilter(['first group'])
+            });
+        };
+        
+   //    $scope.$watch('myGroups', function(newValue, oldValue) {
+       //    console.info('changed!');
+       //    console.log('Old:' + oldValue);
+       //    console.log('New:' + newValue);
+            //$apply()
+        //alert('hey, myGroups has changed!');
+            //console.log($scope.myGroups);
+  //  });
+        
+        //$scope.$watch('$scope.myGroups', function(newVal, oldVal) {
+        //    $scope.myGroups = $scope.myGroups.push(newVal);
+            
+        //});
         
         $scope.groups = '';
         
@@ -47,13 +71,18 @@ angular
         
         $scope.newGroupMember = '';
         
-        $scope.makeNewGroupMemebership = function(groupid) { console.log(groupid);
+        $scope.makeNewGroupMemebership = function(groupid) { //console.log(groupid);
             GroupService
                 .createGroupMembership(groupid)
                 .then(function(response) {
                     alert('Group joined!');
-                    return $scope.myGroups.push(response.data)
+                //$scope.$apply(function(){$scope.myGroups = $scope.myGroups.push(response.data)});
+                return $scope.myGroups.push(response.data);  
             });
+            //$scope.$digest();
+            //$scope.$apply($scope.myGroups);
+            //$scope.$apply(function(){$scope.myGroups});
+            console.log($scope.myGroups);
         };
 
         $scope.postClick = function() {
@@ -66,9 +95,9 @@ angular
             //console.log(groupName + " box was checked");
         };
 
-        $scope.joinClick = function(groupName) {
-            console.log(groupName + " was joined");
-        };
+        //$scope.joinClick = function(groupName) {
+           // console.log(groupName + " was joined");
+        //};
 
         $scope.newGroupClick = function(groupName) {
             console.log(groupName + " was created");
