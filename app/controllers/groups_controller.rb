@@ -24,12 +24,14 @@ class GroupsController < ApplicationController
         #userId = params["user_id"]
         group = Group.find_by_id(params[:group_id])
         group.memberships.build(:user_id => params["user_id"], :group_id => params["group_id"]).save
+        render json: group
     end
     
     def update
         group = Group.find_by_id(params[:id])
         group.update(group_params)
         render json: group
+        
     end
     
     def show

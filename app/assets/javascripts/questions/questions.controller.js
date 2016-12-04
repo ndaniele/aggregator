@@ -4,7 +4,7 @@ angular
 
 //CONTROLLER
 
-    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', 'AnswerService', function($scope, $rootScope, QuestionsService, AnswerService) {
+    .controller('questionsController', ['$scope', '$rootScope', 'QuestionsService', 'AnswerService', 'CommentService', function($scope, $rootScope, QuestionsService, AnswerService, CommentService) {
         
     $scope.name = "Nick is asking a question"
     
@@ -24,35 +24,48 @@ angular
                 $scope.askedQuestions = response.data;
         });
         
-    $scope.newQuestion = '';
+    $scope.newQuestion = '' + "?";
         
         $scope.makeNewQuestion = function() {
             QuestionsService
                 .createQuestion($scope.newQuestion, $rootScope.checkedGroups)
                 .then(function() {
                     alert('Question Created and added to groups!');
+                    $scope.newQuestion = '';
             });
         };
     
-    //$scope.stats = '';
+    $scope.stats = '';
         
         $scope.getQuestionStats = function(questionAnswers) {
             QuestionsService
                 .makeStats(questionAnswers)
-               // .then(function() {
-                //    alert('test');
-            //});
+                //console.log(message);
+            //console.log(yesTotal);
+            //console.log(noTotal);
+            $scope.stats = message;
         };
 
     
     $scope.comment = '';
+        
+       $scope.makeNewComment = function(comment, questionId) {
+        $scope.comment = comment;
+        //console.log(questionId);
+        
+        CommentService
+            .createComment($scope.comment, questionId)
+            .then(function() {
+                alert('You Commented On This Question');
+        });
+    };
         
         
     $scope.newAnswer = '';
 
     $scope.makeNewYesAnswer = function(questionId) {
         $scope.newAnswer = 'Yes';
-        console.log(questionId);
+        //console.log(questionId);
         
         AnswerService
             .createAnswer($scope.newAnswer, questionId)
@@ -68,7 +81,7 @@ angular
         AnswerService
             .createAnswer($scope.newAnswer, questionId)
             .then(function() {
-                alert('You Answered NO to This Question');
+                alert('You Answered No to This Question');
         });
     };
     
