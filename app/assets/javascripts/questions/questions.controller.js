@@ -40,7 +40,7 @@ angular
         $scope.getQuestionStats = function(questionAnswers) {
             QuestionsService
                 .makeStats(questionAnswers)
-                console.log(message);
+                //console.log(message);
             //console.log(yesTotal);
             //console.log(noTotal);
             $scope.stats = message;
@@ -81,7 +81,7 @@ angular
         AnswerService
             .createAnswer($scope.newAnswer, questionId)
             .then(function() {
-                alert('You Answered NO to This Question');
+                alert('You Answered No to This Question');
         });
     };
     

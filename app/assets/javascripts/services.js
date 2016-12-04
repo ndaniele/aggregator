@@ -32,21 +32,15 @@ angular
             });
             
             var yesTotal = yesArray.length;
-            var noTotal = noArray.length;      
+            var noTotal = noArray.length; 
             
            if (yesTotal > noTotal) {
-                   message = "yes is the winner!";
+                   message = "TOTAL YES VOTES: " + yesTotal + ". yes is the winner!";
                } else {
-                   message = "no is the winner";
+                   message = "TOTAL NO VOTES: " + noTotal + ". no is the winner";
                };
                
             return message;
-            //return yesArray;
-            //return yesTotal;
-            //return noTotal;
-            //console.log(message);
-           //console.log(yesTotal);
-            //console.log(questionAnswers);
         };
    
     
