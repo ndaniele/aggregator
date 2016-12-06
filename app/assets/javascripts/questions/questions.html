@@ -13,9 +13,23 @@
                     <div class="panel-body">
                       <a ng-click="makeNewYesAnswer(question.id)" class="btn btn-primary">YES {{city}}</a>
                         <a ng-click="makeNewNoAnswer(question.id)" class="btn btn-primary">NO {{city}}</a>
-                        <input type="text" placeholder="comment" ng-model="comment" class="form-control" />
+
+                         <form name="newCommentForm">
+                            <input 
+                                placeholder="comment"
+                                name="newComment" 
+                                required="required" 
+                                type="text" 
+                                ng-model="comment" 
+                                class="form-control" />
+
+                            <div ng-if="newCommentForm.newComment.$touched && newCommentForm.newComment.$error.required">
+                            Cannot Post Blank Comment!
+                            </div>
+                        </form>
+
                         <a ng-click="makeNewComment(comment, question.id)" class="btn btn-primary">Post {{comment}}</a>
-                    </div>
+                    </div> 
                     <h3>{{comment}}</h3>
                 </div> 
                
