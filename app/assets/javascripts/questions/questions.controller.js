@@ -45,7 +45,7 @@ angular
             //console.log(noTotal);
             $scope.stats = message;
         };
-
+2
     
     $scope.comment = '';
         
