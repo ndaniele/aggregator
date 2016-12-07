@@ -24,10 +24,10 @@ class QuestionsController < ApplicationController
     
     def my_questions
         #binding.pry
-        #user = current_user
-        current_user = User.find_by(id: 1)
+        user = current_user
+        #user = User.find_by(id: 1)
         myQuestions = []
-        userQuestions = current_user.groups.each do |group|
+        userQuestions = user.groups.each do |group|
             group.group_questions.each do |groupQuestion|
                 myQuestions << groupQuestion.question
             end
@@ -58,7 +58,8 @@ class QuestionsController < ApplicationController
     
     def create
        #raise params.inspect
-        user = User.find_by_id(params[:user_id])
+        #user = User.find_by_id(params[:user_id])
+        user = current_user
        question = user.asked_questions.build(question_params)
        #group = Group.find_by(:id => params[:group_id])
         if 

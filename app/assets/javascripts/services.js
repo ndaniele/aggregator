@@ -14,7 +14,7 @@ angular
        };
         
         this.createQuestion = function(newQuestion, checkedGroups) {
-            return $http.post('/questions', {query: newQuestion, user_id: 1, group_id: 7, groups: checkedGroups });
+            return $http.post('/questions', {query: newQuestion, groups: checkedGroups });
         };
         
     }])
