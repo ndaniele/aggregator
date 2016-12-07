@@ -1,11 +1,61 @@
-//MODULE
-angular.module('agtrApp');
+(function() {
 
-//CONTROLLER
+    'use strict'
 
-agtrApp.controller('homeController', ['$scope', function($scope) {
-    
-    $scope.name = "nick"
-    
-}]);
- 
+    angular
+        .module('agtrApp')
+        .controller('homeController', homeController)
+
+        function homeController(Auth, $rootScope) {
+            var vm = this
+            vm.name = 'Nick'
+            vm.logout = Auth.logout
+            vm.login = login
+            vm.register = register
+
+            Auth.currentUser()
+                .then(function(user) {
+                    $rootScope.currentUser = user
+                    //debugger;
+                }, function(error) {
+                    console.log(error)
+                })
+
+            function login() {
+                var config = {
+                        headers: {
+                            'X-HTTP-Method-Override': 'POST'
+                        }
+                    }
+
+                Auth.login(vm.userForm, config)
+                    .then(function(user) {
+                        $rootScope.currentUser = user
+                    }, function(error) {
+                        console.log(error)
+                    })
+            }
+
+            function register() {
+                var config = {
+                   headers: {
+                       'X-HTTP-Method-Override': 'POST'
+                   }
+                };
+
+                Auth.register(vm.newUser, config)
+                    .then(function(registeredUser) {
+                        $rootScope.currentUser = registeredUser
+                }, function(error) {
+                   console.log(error)
+                });
+            }
+
+            $rootScope.$on('devise:logout', function(event, user) {
+                $rootScope.currentUser = {}
+            })
+
+
+        }
+
+}())
