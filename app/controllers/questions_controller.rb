@@ -38,11 +38,11 @@ class QuestionsController < ApplicationController
     
     def my_asked_questions
         #binding.pry
-        #user = current_user
-        current_user = User.find_by(id: 1)
+        user = current_user
+        #current_user = User.find_by(id: 1)
         myAskedQuestions = []
         userAskedQuestions = 
-            current_user.questions.each do |question|
+            user.questions.each do |question|
                 myAskedQuestions << question
             end
         render json: myAskedQuestions
