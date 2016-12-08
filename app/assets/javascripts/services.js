@@ -34,7 +34,7 @@ angular
         };
         
         this.createGroupMembership = function(groupid) {
-            return $http.post('/groups/join', {group_id: groupid, user_id: 1})
+            return $http.post('/groups/join', {group_id: groupid})
         };
     }])
 

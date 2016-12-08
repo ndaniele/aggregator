@@ -22,8 +22,9 @@ class GroupsController < ApplicationController
     def createMembership
         #binding.pry
         #userId = params["user_id"]
+        user = current_user
         group = Group.find_by_id(params[:group_id])
-        group.memberships.build(:user_id => params["user_id"], :group_id => params["group_id"]).save
+        group.memberships.build(:user_id => user.id, :group_id => params["group_id"]).save
         render json: group
     end
     
@@ -41,9 +42,9 @@ class GroupsController < ApplicationController
     
     def my_groups
         #binding.pry
-        #user = current_user
-        current_user = User.find_by(id: 1)
-        userGroups = current_user.groups
+        user = current_user
+        #current_user = User.find_by(id: 1)
+        userGroups = user.groups
         render json: userGroups
     end
     
