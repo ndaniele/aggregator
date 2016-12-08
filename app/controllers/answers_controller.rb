@@ -26,7 +26,7 @@ class AnswersController < ApplicationController
       #binding.pry
     question =  Question.find_by(id: params[:question_id])
     answer = question.answers.build(answer_params)
-    answer.user_id = params["user_id"] #session[:user_id]
+    answer.user_id = current_user.id #session[:user_id]
     if
       answer.save
       render json: question
