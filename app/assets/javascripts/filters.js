@@ -22,9 +22,13 @@ agtrApp.filter('questionStatsFilter', function() {
             var noTotal = noArray.length; 
             
            if (yesTotal > noTotal) {
-                   message = "YES is the winner! " + "total Yes votes: " + yesTotal + " total No votes: " + noTotal ;
+                   message = "YES is the winner! " 
+                       + "total Yes votes: " + yesTotal 
+                       + " total No votes: " + noTotal ;
                } else {
-                   message = "No is the winner! " + "total No votes: " + noTotal + " total Yes votes: " + yesTotal ;
+                   message = "No is the winner! " 
+                       + "total No votes: " + noTotal 
+                       + " total Yes votes: " + yesTotal ;
                };
                
             return message;
