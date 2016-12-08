@@ -1,12 +1,11 @@
-(function() {
+//MODULE
+angular
+    .module('agtrApp')
 
-    'use strict'
+//CONTROLLER
+             
+    .controller('homeController', ['Auth', '$rootScope', function(Auth, $rootScope) {
 
-    angular
-        .module('agtrApp')
-        .controller('homeController', homeController)
-
-        function homeController(Auth, $rootScope) {
             var vm = this
             vm.name = 'Nick'
             vm.logout = Auth.logout
@@ -56,6 +55,4 @@
             })
 
 
-        }
-
-}())
+}]);
