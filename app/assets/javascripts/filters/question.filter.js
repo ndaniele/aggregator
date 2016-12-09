@@ -1,7 +1,7 @@
 //MODULE
 var agtrApp = angular.module('agtrApp', ['ui.router', 'templates', 'Devise']);
 
- //Filters
+ //Filter
 
 agtrApp.filter('questionStatsFilter', function() {
  
