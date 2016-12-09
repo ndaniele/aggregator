@@ -37,7 +37,7 @@ class QuestionsController < ApplicationController
         user = current_user
         myAskedQuestions = []
         userAskedQuestions = 
-            user.questions.each do |question|
+            user.asked_questions.each do |question|
                 myAskedQuestions << question
             end
         render json: myAskedQuestions
