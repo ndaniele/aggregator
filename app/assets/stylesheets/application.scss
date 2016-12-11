@@ -19,6 +19,23 @@
 @import "bootstrap";
 
 
+.panel-heading {
+    padding-bottom: 30px;
+}
+
 .groupListItem {
     float: left;
+    margin-left: 10px;
+   display: inline;
+    font-style: italic; 
  }
+
+.groupListLabel {
+    float: left;
+    padding-top: 0px;
+   //display: inline;
+ }
+
+//.comment {
+//    font-style: italic;
+//}

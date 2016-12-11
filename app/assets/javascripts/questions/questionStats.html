@@ -5,22 +5,22 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading"> 
-                        <label>Question</label>
+                        <label>Question:</label>
                         <h2>{{question.query }}</h2>
                         <hr />
-                        <label>Was Posted to Groups:</label>
+                        <label class="groupListLabel">Was Posted to Groups:</label>
                         <div ng-repeat="group in question.groups">
                             <li class="groupListItem">{{group.groupname}}</li>
                         </div>
                     </div>
                     <div class="panel-body">
                         <ul>
-                            <label>Answers</label>
+                            <label>Answer:</label>
                             <h3>{{question | questionStatsFilter}}</h3>   
                             <hr />
-                            <label>Comment History</label>
+                            <label>Comment History:</label>
                             <div ng-repeat="comment in question.comments">
-                                <li>{{comment.comment}} - {{comment.created_at | date:'MM/dd/yyyy @ h:mma' }}</li>
+                                <em class="comment">{{comment.comment}} - {{comment.created_at | date:'MM/dd/yyyy @ h:mma' }}</em>
                             </div>
                         </ul>
                     </div>
