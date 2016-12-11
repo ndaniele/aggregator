@@ -40,7 +40,7 @@ angular
             url: 'group/new',
             templateUrl: 'groups/newGroup.html',
             controller: 'groupController'
-        })  
+        }) 
     
     $urlRouterProvider.otherwise('/')
     

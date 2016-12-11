@@ -11,8 +11,16 @@
                     <h2>{{group.groupname}}</h2> 
                 </div>
                 <div class="panel-body">
-                     <a ng-click="makeNewGroupMemebership(group.id)" class="btn btn-primary">JOIN GROUP</a>
-                    <a ng-click="#" class="btn btn-primary">Group Page</a>
+                    
+                    <label class="groupListLabel">Group Members:</label>
+                    <div ng-repeat="user in group.users">
+                        <ul>
+                            <li class="groupListItem">@{{user.username}}</li>
+                        </ul>
+                    </div>
+                    <br />
+                    <label>Total Questions Posted to {{group.groupname}}: {{group.questions.length}}</label><br />
+                      <a ng-click="makeNewGroupMemebership(group.id)" class="btn btn-primary">JOIN GROUP</a>
                 </div>
             </div> 
               
