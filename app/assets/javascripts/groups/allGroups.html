@@ -3,13 +3,15 @@
 <input ng-model="search" placeholder="search all groups"/>
 
 <div ng-repeat="group in groups | filter:search">
+    <br />
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{group.groupname }} || <a ng-click="makeNewGroupMemebership(group.id)" class="btn btn-primary">JOIN GROUP</a> </h3> 
+                    <h2>{{group.groupname}}</h2> 
                 </div>
-                <div class="panel-body"> {{group.members}}
+                <div class="panel-body">
+                     <a ng-click="makeNewGroupMemebership(group.id)" class="btn btn-primary">JOIN GROUP</a>
                 </div>
             </div> 
               
