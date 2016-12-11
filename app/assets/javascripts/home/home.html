@@ -1,5 +1,3 @@
-<!--<h1>Hello {{currentUser.username}}</h1>-->
-
 <h3 ng-if="!!currentUser.username">Welcome {{ currentUser.username }}!</h3>
 <button class="btn btn-primary" ng-if="!!currentUser.username" ng-click="vm.logout()">Logout</button>
 
@@ -57,20 +55,13 @@
                       <input ng-click="checkClick(group.id)" type="checkbox" aria-label="..."> {{ group.groupname}}
                   </div>
                   
-               <!--   <div ng-controller="questionsController" ng-model="newQuestion">
-                    <li role="separator" class="divider"></li>
-                    <li><a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">POST "{{newQuestion}}" to Selected Groups</a></li>
-                  </div> -->
-                  
               </ul>
             </div>
              
-            <a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">POST "{{newQuestion}}" to Selected Groups</a>
+            <a ng-click="makeNewQuestion(newQuestion)" class="btn btn-primary">POST Question to Selected Groups</a>
             
         </div>
         
-        
-    <!--    <a ui-sref="home.myGroups" class="btn btn-primary">Post To Group/s</a> -->
         
         <a ui-sref="home.questionStats" class="btn btn-primary">Get Answers</a>
         
