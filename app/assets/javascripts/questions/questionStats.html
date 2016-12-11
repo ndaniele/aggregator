@@ -16,11 +16,13 @@
                     <div class="panel-body">
                         <ul>
                             <label>Answer:</label>
-                            <h3>{{question | questionStatsFilter}}</h3>   
-                            <hr />
-                            <label>Comment History:</label>
-                            <div ng-repeat="comment in question.comments">
-                                <em class="comment">{{comment.comment}} - {{comment.created_at | date:'MM/dd/yyyy @ h:mma' }}</em>
+                            <h3>{{question | questionStatsFilter}}</h3> 
+                            <div ng-if="!question.comments.length == 0">
+                                <hr />
+                                <label>Comment History:</label>
+                                <div ng-repeat="comment in question.comments">
+                                    <em class="comment">{{comment.comment}} - {{comment.created_at | date:'MM/dd/yyyy @ h:mma' }}</em>
+                                </div>
                             </div>
                         </ul>
                     </div>
