@@ -1,4 +1,3 @@
-require 'pry'
 class CommentsController < ApplicationController
 
   def create

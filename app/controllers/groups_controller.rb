@@ -1,6 +1,4 @@
-require 'pry'
 class GroupsController < ApplicationController
-    #before_action: :authenticate_user! #, only: [:edit]
     
     def index
         groups = Group.all
@@ -14,7 +12,7 @@ class GroupsController < ApplicationController
     
     def create    
         group = Group.create(group_params)
-        render json: group #, status: 201
+        render json: group
     end
         
     def createMembership

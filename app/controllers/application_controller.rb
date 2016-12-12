@@ -15,10 +15,7 @@ class ApplicationController < ActionController::Base
   protected
     
     def index
-      #  user = current_user
-    #        if current_user.nil?
-     #       redirect_to new_user_session_path
-      #      end      
+          
     end
     
     def verified_request?
