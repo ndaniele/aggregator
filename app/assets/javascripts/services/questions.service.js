@@ -17,4 +17,8 @@ angular
             return $http.post('/questions', {query: newQuestion, groups: checkedGroups });
         };
         
+        this.updateQuestionVote = function(questionId, voteCount) {
+            return $http.patch('/questions/' + questionId, {votes: voteCount });
+        };
+        
     }])

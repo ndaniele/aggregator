@@ -1,3 +1,4 @@
+require 'pry'
 class QuestionsController < ApplicationController
      
     def question_data
@@ -32,6 +33,10 @@ class QuestionsController < ApplicationController
         render json: myAskedQuestions
     end
     
+    def test
+         binding.pry
+    end
+    
     
     def create
         user = current_user
@@ -47,7 +52,15 @@ class QuestionsController < ApplicationController
             render json: question
         end
     end
-
+    
+    def update
+        #binding.pry
+        #raise params.inspect
+        question = Question.find(params[:id])
+        question.votes = params["votes"]
+        question.save
+    end
+    
 
     def show
         question = Question.find(params[:id])

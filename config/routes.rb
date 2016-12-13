@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/questions/my_questions' => 'questions#my_questions'
     
   get '/questions/my_asked_questions' => 'questions#my_asked_questions'
-    
+
 
  devise_scope :user do 
     get '/users/sign_out' => 'devise/sessions#destroy'

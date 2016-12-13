@@ -110,16 +110,22 @@ angular
     //$scope.clickArray = [];
         
     $scope.counterClick = function(question) {
-        //clickArray = [];
-        //var i = 1;
-        //debugger;
-        //clickArray.push(i);
         question.votes = question.votes + 1;
-            //clickArray.length;
         console.log(question.votes);
-        return question.votes;
+        //return question.votes;
         
-        console.log("counter was clicked");
+         QuestionsService 
+            .updateQuestionVote(question.id, question.votes)
+            .then(function() {
+                //$scope.comment = '';
+                console.log("counter was clicked");      
+        });
+        
+        //console.log("counter was clicked");
     };
+        
+        
+       //$scope.comment = '';
+        
 
 }]);
