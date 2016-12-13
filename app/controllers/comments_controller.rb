@@ -1,8 +1,11 @@
+require 'pry'
 class CommentsController < ApplicationController
 
   def create
+      #binding.pry
+      #raise params.inspect
     question =  Question.find_by(id: params[:question_id])
-    comment = question.comments.build(comment: params["comment"], question_id: question.id)
+    comment = question.comments.new(comment: params["comment"], question_id: question.id)
     if
       comment.save
       render json: question

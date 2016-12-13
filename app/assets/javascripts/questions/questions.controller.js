@@ -56,7 +56,8 @@ angular
         CommentService
             .createComment($scope.comment, questionId)
             .then(function() {
-                alert('You Commented On This Question');
+                $scope.comment = '';
+                alert('You Commented On This Question');      
         });
     };
         
