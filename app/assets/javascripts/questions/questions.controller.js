@@ -99,17 +99,5 @@ angular
     };
     
     $scope.test = 'Test';
-    
-    //$scope.newQuestion = '';
-    
-//activate()
-//
-//function activate() {
-//   return $http.get('/questions')
-//                      .then(function(result) {
-//                       //console.log(result.data);
-//                       return $scope.questions = result.data
-//                      })
-//}
 
 }]);
