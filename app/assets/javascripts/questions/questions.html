@@ -30,6 +30,10 @@
                         </form>
 
                         <a ng-click="makeNewComment(comment, question.id)" class="btn btn-primary">Post {{comment}}</a>
+                        
+                        <a ng-click="counterClick(question)" class="btn btn-primary">VOTE COUNTER</a>
+                        
+                    {{question.votes}}
                     </div> 
                     <h3>{{comment}}</h3>
                 </div> 

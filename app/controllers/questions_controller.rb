@@ -35,7 +35,7 @@ class QuestionsController < ApplicationController
     
     def create
         user = current_user
-        question = user.asked_questions.build(question_params)
+        question = user.asked_questions.new(question_params)
             if 
             question.save
                 groupArray = params["groups"]

@@ -14,6 +14,13 @@ angular
             .getQuestions()
             .then(function(response) {
                 $scope.questions = response.data;
+                console.log($scope.questions);   
+            //debugger;
+                $scope.questions.forEach(function(question) {
+                //debugger;
+                question.votes = 0;  
+                });
+                    
         });
     
      $scope.askedQuestions = '';
@@ -99,5 +106,20 @@ angular
     };
     
     $scope.test = 'Test';
+        
+    //$scope.clickArray = [];
+        
+    $scope.counterClick = function(question) {
+        //clickArray = [];
+        //var i = 1;
+        //debugger;
+        //clickArray.push(i);
+        question.votes = question.votes + 1;
+            //clickArray.length;
+        console.log(question.votes);
+        return question.votes;
+        
+        console.log("counter was clicked");
+    };
 
 }]);
