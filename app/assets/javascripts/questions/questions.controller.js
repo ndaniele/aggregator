@@ -18,7 +18,7 @@ angular
             //debugger;
                 $scope.questions.forEach(function(question) {
                 //debugger;
-                question.votes = 0;  
+                //question.votes = 0;  
                 });
                     
         });
