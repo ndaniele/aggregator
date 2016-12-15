@@ -118,14 +118,11 @@ angular
             .updateQuestionVote(question.id, question.votes)
             .then(function() {
                 //$scope.comment = '';
-                console.log("counter was clicked");      
+                //console.log("counter was clicked");      
         });
-        
-        //console.log("counter was clicked");
+
     };
         
-        
-       //$scope.comment = '';
         
 
 }]);

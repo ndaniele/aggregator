@@ -33,10 +33,6 @@ class QuestionsController < ApplicationController
         render json: myAskedQuestions
     end
     
-    def test
-         binding.pry
-    end
-    
     
     def create
         user = current_user
