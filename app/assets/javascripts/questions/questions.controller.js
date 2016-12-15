@@ -18,7 +18,8 @@ angular
             //debugger;
                 $scope.questions.forEach(function(question) {
                 //debugger;
-                //question.votes = 0;  
+                //question.votes = 0; 
+                    question.comment = " ";
                 });
                     
         });
@@ -54,18 +55,22 @@ angular
         };
 
     
-    $scope.comment = '';
+    //$scope.comment = '';
         
-       $scope.makeNewComment = function(comment, questionId) {
-        $scope.comment = comment;
+       $scope.makeNewComment = function(comment, question) {
+        question.comment = comment;
         //console.log(questionId);
+           question.comments.push(comment);
+           //debugger;
         
         CommentService
-            .createComment($scope.comment, questionId)
+            .createComment(question.comment, question)
             .then(function() {
                 $scope.comment = '';
                 alert('You Commented On This Question');      
         });
+           
+           //debugger;
     };
         
         

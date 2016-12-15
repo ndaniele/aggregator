@@ -21,7 +21,7 @@
                                 name="newComment" 
                                 required="required" 
                                 type="text" 
-                                ng-model="comment" 
+                                ng-model="question.comment" 
                                 class="form-control" />
 
                             <div ng-if="newCommentForm.newComment.$touched && newCommentForm.newComment.$error.required">
@@ -29,13 +29,16 @@
                             </div>
                         </form>
 
-                        <a ng-click="makeNewComment(comment, question.id)" class="btn btn-primary">Post {{comment}}</a>
+                        <a ng-click="makeNewComment(question.comment, question)" class="btn btn-primary">Post {{question.comment}}</a>
                         
                         <a ng-click="counterClick(question)" class="btn btn-primary">VOTE COUNTER</a>
                         
+                        <div ng-repeat="comment in question.comments">
+                            {{comment.comment}}
+                        </div>
+                        
                     {{question.votes}}
                     </div> 
-                    <h3>{{comment}}</h3>
                 </div> 
                
             </div>
